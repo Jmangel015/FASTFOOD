@@ -2,6 +2,8 @@ package com.example.fastfood;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.media.MediaPlayer;
+
 import android.speech.RecognizerIntent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,6 +22,7 @@ public class Pedido extends AppCompatActivity {
     private ArrayList<Respuesta> respuest;
     private ImageView image;
     ImageView regresa;
+   public  MediaPlayer mp;
 
     private static final String hamburguesa = "hamburguesa";
     private static final String pizza = "pizza";
@@ -35,16 +38,17 @@ public class Pedido extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pedido);
 
+
         inicializar();
 
 
     }
 
-    public  void regresar (){
-        regresa = (ImageView) findViewById(R.id.imageView);
+    public  void regresar (View v){
         regresa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.start();
                 Intent intent = new Intent(v.getContext(), MenuActivity.class);
                 startActivityForResult(intent, 0);
 
@@ -53,6 +57,10 @@ public class Pedido extends AppCompatActivity {
     }
 
     public  void inicializar (){
+        regresa = (ImageView) findViewById(R.id.imageView);
+
+        mp = (MediaPlayer) MediaPlayer.create(this, R.raw.click);
+
         txtOrden = (TextView)findViewById(R.id.txtOrden);
         respuest = proveeerDatos();
         image = (ImageView)findViewById(R.id.imageView3);

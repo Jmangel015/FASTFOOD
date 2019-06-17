@@ -68,6 +68,6 @@
         android:layout_marginBottom="28dp"
         android:onClick="regresar"
         app:srcCompat="@drawable/back"
-        tools:ignore="OnClick" />
+        />
 
 </RelativeLayout>
