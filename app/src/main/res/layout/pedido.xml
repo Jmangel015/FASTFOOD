@@ -10,7 +10,7 @@
 
     <ScrollView
         android:layout_width="wrap_content"
-        android:layout_height="287dp"
+        android:layout_height="292dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
@@ -18,7 +18,9 @@
         android:layout_marginStart="38dp"
         android:layout_marginEnd="48dp"
         android:layout_marginRight="48dp"
-        android:layout_marginBottom="115dp">
+        android:layout_marginBottom="110dp"
+        android:layout_marginLeft="38dp"
+        android:layout_alignParentLeft="true">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -37,8 +39,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:gravity="center"
-                android:text="NO HEMOS TOMADO TU ORDEN"
                 android:scrollbarStyle="outsideInset"
+                android:text="NO HEMOS TOMADO TU ORDEN"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp"
@@ -51,7 +53,7 @@
     <ImageView
         android:id="@+id/regresar"
         android:layout_width="wrap_content"
-        android:layout_height="111dp"
+        android:layout_height="32dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
@@ -60,11 +62,12 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="117dp"
         android:layout_marginLeft="117dp"
-        android:layout_marginTop="591dp"
+        android:layout_marginTop="580dp"
         android:layout_marginEnd="116dp"
         android:layout_marginRight="116dp"
         android:layout_marginBottom="28dp"
         android:onClick="regresar"
-        app:srcCompat="@drawable/back" />
+        app:srcCompat="@drawable/back"
+        tools:ignore="OnClick" />
 
 </RelativeLayout>
